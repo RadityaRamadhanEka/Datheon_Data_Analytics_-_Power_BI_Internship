@@ -38,7 +38,7 @@ Datheon_Data_Analytics_-_Power_BI_Internship/
 │   │   ├── 02_monthly_seasonality_and_velocity.png
 │   │   ├── 03_category_subcategory_region_profit.png
 │   │   └── 04_discount_sensitivity_and_margin.png
-│   └── superstore_eda.ipynb
+│   └── DATHEON_TASK_1.ipynb
 └── Task_2_PowerBI_Executive_Dashboard/
     ├── README.md
     └── screenshots/
