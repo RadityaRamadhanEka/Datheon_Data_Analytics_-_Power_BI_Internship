@@ -11,7 +11,7 @@
 | Task | Title | Status | Folder |
 | :--- | :--- | :---: | :--- |
 | **Task 1** | Exploratory Data Analysis (EDA) on Superstore Retail Sales | ✅ Completed | [`Task_1_Superstore_EDA/`](./Task_1_Superstore_EDA) |
-| **Task 2** | Power BI Executive Dashboard | 🔄 In Progress | [`Task_2_PowerBI_Executive_Dashboard/`](./Task_2_PowerBI_Executive_Dashboard) |
+| **Task 2** | Interactive Power BI Executive Sales & Profit Dashboard | ✅ Completed | [`Task_2_PowerBI_Executive_Dashboard/`](./Task_2_PowerBI_Executive_Dashboard) |
 
 ---
 
@@ -19,7 +19,7 @@
 - **Data Analysis & Wrangling:** Python 3, Pandas, NumPy
 - **Data Visualization:** Matplotlib, Seaborn
 - **Notebooks:** Jupyter Notebook / Google Colab
-- **BI & Reporting (Task 2):** Power BI Desktop, DAX
+- **BI & Reporting:** Power BI Desktop, Power Query (M), DAX, Star Schema Modeling
 
 ---
 
@@ -41,7 +41,12 @@ Datheon_Data_Analytics_-_Power_BI_Internship/
 │   └── DATHEON_TASK_1.ipynb
 └── Task_2_PowerBI_Executive_Dashboard/
     ├── README.md
+    ├── superstore_executive_dashboard.pbix
+    ├── executive_dashboard_report.pdf
     └── screenshots/
+        ├── 01_executive_overview.png
+        ├── 02_product_profitability.png
+        └── 03_regional_and_customer_insights.png
 ```
 
 ---
@@ -60,3 +65,15 @@ From **9,993** cleaned line items (**5,009** unique orders, **793** unique custo
    **West** leads in profit ($108,418) and margin (**14.94%**) with disciplined discounting (10.9% avg). **Central** generates 28% more revenue than South ($501,240 vs. $391,722) yet delivers the lowest profit ($39,706, **7.92% margin**) due to an average discount of **24.0%**.
 5. **High Customer Retention (98.5% Repeat Rate) With B2B Margin Upside:**
    **98.49%** of customers (781/793) placed 2+ orders (mean **6.32 orders**, **$2,896.49** lifetime spend). **Consumer** brings 50.56% of revenue at an 11.55% margin ($449.11 AOV), while **Home Office** (14.05% margin, $472.36 AOV) and **Corporate** (13.03% margin, $466.41 AOV) deliver stronger unit economics.
+
+---
+
+## Task 2 — Power BI Executive Dashboard Highlights
+
+Built on a **Star Schema** (`Fact_Orders`, `Dim_Customer`, `Dim_Product`, `Dim_Date`, `Dim_People`) with dynamic DAX measures (`Total Sales`, `Total Profit`, `Profit Margin %`, `YoY Sales Growth %`, `Total Orders`, `Avg Order Value`) and synced Date, Region, and Segment slicers across 3 pages:
+
+- **Page 1 — Executive Overview:** KPI scorecards, continuous monthly sales/profit velocity (`2015–2018`), annual sales waterfall by category, and Category/Regional Treemaps.
+- **Page 2 — Product Profitability & Discount Sensitivity:** Conditional-formatted Category/Sub-Category matrix, `Discount Cliff` profit & margin curve (`0%–80%`), and Sub-Category profit ranking.
+- **Page 3 — Regional Performance & Customer Segment Insights:** Regional sales vs. profit breakdown, annual revenue & YoY growth (`-2.78%` in 2016 → `+29.47%` in 2017 → `+20.36%` in 2018), segment share donut, and Top 10 customers table.
+
+![Page 1 Executive Overview](./Task_2_PowerBI_Executive_Dashboard/screenshots/01_executive_overview.png)
